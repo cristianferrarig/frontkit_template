@@ -14,6 +14,3 @@ gem "builder", "~> 3.0" # For feed.xml.builder
 gem 'haml', '~> 4.0.5'
 gem 'sass', '~> 3.3.6'
 gem 'uglifier', '~> 2.5.0'
-
-
-# gem 'middleman-sprockets', '~> 3.1.2' # este es el de middleman
