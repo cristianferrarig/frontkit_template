@@ -1,13 +1,4 @@
 ###
-# Compass
-###
-
-# Change Compass configuration
-# compass_config do |config|
-#   config.output_style = :compact
-# end
-
-###
 # Page options, layouts, aliases and proxies
 ###
 
@@ -51,6 +42,16 @@ set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
+set :fonts_dir, 'fonts'
+
+ready do
+  # if you have assets in directories other than your :js_dir or :css_dir,
+  # you can make them importable by adding them to your Sprockets import path.
+  sprockets.append_path '/vendor'
+  # Sprockets supports Bower, so you can add your Bower components path directly:
+  sprockets.append_path File.join root, 'bower'
+end
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
@@ -64,6 +65,11 @@ configure :build do
 
   # Use relative URLs
   # activate :relative_assets
+
+  # Compress PNGs after build
+  # First: gem install middleman-smusher
+  # require "middleman-smusher"
+  # activate :smusher
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
