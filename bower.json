@@ -1,0 +1,8 @@
+{
+  "name": "middleman-boilerplate",
+  "version": "1.0.0",
+  "directory": "bower",
+  "dependencies": {
+    "normalize.css": "3.0.1"
+  }
+}
