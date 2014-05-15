@@ -16,15 +16,28 @@
 # end
 
 # Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
+#
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
 #  :which_fake_page => "Rendering a fake page with a local variable" }
 
+
+
 ###
-# Helpers
+# Utilities
 ###
 
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
+
+# Automatically add vendor prefixes to CSS rules in stylesheets.
+activate :autoprefixer
+
+# The extension has 2 optionally configurable fields:
+# https://github.com/ai/autoprefixer#browsers
+# activate :autoprefixer do |config|
+#   config.browsers = ['last 2 versions', 'Explorer >= 9']
+#   config.cascade  = false
+# end
 
 # Reload the browser automatically whenever files change
 activate :livereload
@@ -35,12 +48,24 @@ activate :livereload
 activate :directory_indexes
 # set :index_file, "default.html"
 
+
+
+###
+# Helpers
+###
+
 # Methods defined in the helpers block are available in templates
 # helpers do
 #   def some_helper
 #     "Helping"
 #   end
 # end
+
+
+
+###
+# Project configuration
+###
 
 set :css_dir,    'assets/stylesheets'
 set :js_dir,     'assets/javascripts'

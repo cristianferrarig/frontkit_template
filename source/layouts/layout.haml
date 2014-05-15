@@ -9,8 +9,16 @@
     -# Use title if it's in the page YAML frontmatter
     %title= current_page.data.title || "The Middleman"
 
-    = stylesheet_link_tag "all"
-    = javascript_include_tag  "all"
+    = stylesheet_link_tag "application"
+    = javascript_include_tag  "application"
+
+    /[if lt IE 9]
+      -# HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+      -# WARNING: Respond.js doesn't work if you view the page via file://
+      = javascript_include_tag  "html5shiv"
+      = javascript_include_tag  "respond"
+      -# %script{src: "https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"}
+      -# %script{src: "https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"}
 
   %body{ class: page_classes }
     = yield
