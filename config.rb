@@ -29,6 +29,12 @@
 # Reload the browser automatically whenever files change
 activate :livereload
 
+# Middleman provides the Directory Indexes extension to tell Middleman
+# to create a folder for each .html file and place the built template file
+# as the index of that folder.
+activate :directory_indexes
+# set :index_file, "default.html"
+
 # Methods defined in the helpers block are available in templates
 # helpers do
 #   def some_helper
@@ -36,13 +42,10 @@ activate :livereload
 #   end
 # end
 
-set :css_dir, 'stylesheets'
-
-set :js_dir, 'javascripts'
-
-set :images_dir, 'images'
-
-set :fonts_dir, 'fonts'
+set :css_dir,    'assets/stylesheets'
+set :js_dir,     'assets/javascripts'
+set :images_dir, 'assets/images'
+set :fonts_dir,  'assets/fonts'
 
 ready do
   # if you have assets in directories other than your :js_dir or :css_dir,
@@ -52,8 +55,16 @@ ready do
   sprockets.append_path File.join root, 'bower'
 end
 
+configure :development do
+  set :debug_assets, true
+end
+
 # Build-specific configuration
 configure :build do
+
+  # Ignoring files
+  # ignore 'javascripts/lib/*'
+
   # For example, change the Compass output style for deployment
   # activate :minify_css
 
