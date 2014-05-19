@@ -1,0 +1,18 @@
+@mixin button-variant($variant-name, $variant-bg, $variant-color: white) {
+  #{$button-name+'-'+$variant-name} {
+    background-color: $variant-bg;
+    color: $variant-color;
+    &:hover {
+      background-color: darken($variant-bg,5%);
+    }
+    @content;
+  }
+}
+
+@include button-variant(primary,   $brand-primary);
+@include button-variant(secondary, $brand-secondary);
+@include button-variant(default,   $schema-default);
+@include button-variant(info,      $schema-info);
+@include button-variant(success,   $schema-success);
+@include button-variant(warning,   $schema-warning);
+@include button-variant(danger,    $schema-danger);

@@ -1,0 +1,22 @@
+$input-font-family:                  inherit !default;
+$input-font-weight:                  normal  !default;
+$input-font-size:                    1em     !default;
+
+$input-border-radius:                get-global(border-radius) !default;
+$input-border-width:                 0       !default;
+$input-border-style:                 none    !default;
+$input-bg:                           white   !default;
+$input-color:                        #444    !default;
+
+$input-height:                       3em     !default;
+$input-line-height:                  1       !default;
+$input-margin:                       0       !default;
+
+$input-padding:                      (($input-height - $input-line-height) / 2) !default;
+
+$input-multiline-line-height:        1.4 !default;
+$input-multiline-padding-v:          (($input-height - $input-multiline-line-height) / 2)  !default;
+$input-multiline-padding-h:          (($input-height - $input-multiline-line-height) / 2)  !default;
+$input-multiline-padding:            $input-multiline-padding-v $input-multiline-padding-h !default;
+
+$input-placeholder-color:            #888    !default;

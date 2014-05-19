@@ -1,0 +1,48 @@
+
+@function is-enabled($property) {
+  $is-enable: map-get($enable, $property);
+  @return $is-enable;
+}
+
+@function get-global($property) {
+  $value: map-get($global, $property);
+  @return $value;
+}
+
+
+
+/* See http://mrdanadams.com/2012/pixel-ems-css-conversion-sass-mixin/ */
+
+
+@function solid($color, $background: white) {
+  $percent: alpha($color) * 100%;
+  $opaque: opacify($color, 1);
+  $solid-color: mix($opaque, $background, $percent);
+  @return $solid-color;
+}
+
+
+@function remove-unit($target){
+  // extract to https://gist.github.com/moyarich/3260638
+  $one: 1;
+  @if not unitless($target){
+    $target-unit: unit($target);
+    // Find out the unit of measurement being used
+    @if     ($target-unit == "px"){ $one: 1px; }
+    @elseif ($target-unit == "em"){ $one: 1em; }
+    @elseif ($target-unit == "%" ){ $one: 1%;  }
+    // Dividing by the same unit forces sass to return a value with no unit
+    @return $target / $one ;
+  }
+  @else {
+    @return $target;
+  }
+}
+
+
+@function pem($value, $base: get-global(font-size)) {
+  // Pixel to em
+  $base-value: remove-unit($base);
+
+  @return ($value/$base-value) * 1em;
+}

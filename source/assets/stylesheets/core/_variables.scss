@@ -1,0 +1,119 @@
+
+
+$enable: (
+  border-width:    false,
+  border-radius:   true
+);
+
+$global: (
+  border-radius:   .2em,
+  border-rounded:  200px,
+  font-size:       16px
+);
+
+$tone: (
+  darkest:         #000,
+  darker:          #000,
+  dark:            #000,
+  light:           #000,
+  lighter:         #000,
+  lightest:        #000
+);
+
+
+$font-family-sans-1:  "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+
+$button-name:                        ".button" !default;
+$segmented-button-name:              ".segmented-button" !default;
+$multi-line-button-name:             ".multi-line-button" !default;
+$segmented-multi-line-button-name:   ".segmented-multi-line-button" !default;
+
+
+
+/* Default font size in pixels if not overridden. */
+$base-font-size: get-global(font-size);
+
+
+$tone-darkest:                 #000 !default;
+$tone-darker:                  #000 !default;
+$tone-dark:                    #000 !default;
+$tone:                         #000 !default;
+$tone-light:                   #000 !default;
+$tone-lighter:                 #000 !default;
+$tone-lightest:                #000 !default;
+
+$brand-primary:                #0088CC !default;
+$brand-secondary:              #FC6605 !default;
+
+$schema-default:               #818896 !default;
+$schema-success:               #5cb85c !default;
+$schema-info:                  #5bc0de !default;
+$schema-warning:               #f0ad4e !default;
+$schema-danger:                #d9534f !default;
+
+
+//== Scaffolding
+//
+// ## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+$body-bg:               #fff !default;
+$body-bg:               lightGray;
+//** Global text color on `<body>`.
+$text-color:            $tone-dark !default;
+
+//** Global textual link color.
+$link-color:            $brand-primary !default;
+//** Link hover color set via `darken()` function.
+$link-hover-color:      darken($link-color, 15%) !default;
+
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif:  "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !default;
+$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
+
+$font-family-base:        $font-family-sans-serif !default;
+
+$font-size-base:          14px !default;
+
+
+
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-base:        $font-family-sans-serif !default;
+
+$font-size-base:          16px !default;
+// $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
+// $font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
+
+// $font-size-h1:            floor(($font-size-base * 2.6)) !default; // ~36px
+// $font-size-h2:            floor(($font-size-base * 2.15)) !default; // ~30px
+// $font-size-h3:            ceil(($font-size-base * 1.7)) !default; // ~24px
+// $font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
+// $font-size-h5:            $font-size-base !default;
+// $font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
+
+$line-height-base:        1.4 !default;
+
+
+
+
+
+
+$include-classes:              true !default;
+$include-schemas:              true !default;
+
+$include-buttons-classes:      $include-classes !default;
+$include-buttons-schemas:      $include-schemas !default;
