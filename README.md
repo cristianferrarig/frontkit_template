@@ -1,25 +1,13 @@
 # Middleman Boilerplate
 
-**middleman-boilerplate** is a [Middleman 3.x](http://middlemanapp.com/) project template with. As with all Middleman templates, using [Bundler](http://gembundler.com/) and [Rbenv](https://github.com/sstephenson/rbenv/) is recommended.
-
-###Features###
-* Optimized asset structure
-* Conditional IE html tags
-* Viewport meta setup for iOS and Android
-* Favicon and app icons
-* Dynamic title attribute body class via YAML front-matter
-
-###Includes###
-* Modernizr 2.6.2 via cdnjs.com
-* jQuery 2.0.3 via cdnjs.com
-* Google Analytics (async)
+**frontkit** is a [Middleman 3.x](http://middlemanapp.com/) project template with. As with all Middleman templates, using [Bundler](http://gembundler.com/) and [Rbenv](https://github.com/sstephenson/rbenv/) is recommended.
 
 ### Installation ###
 
 Clone **middleman-boilerplate** into `~/.middleman`. You will need to create this directory if it doesn't exist.
-```$ git clone git://github.com/cristianferrarig/middleman-boilerplate.git ~/.middleman/kick```
+```$ git clone git://github.com/cristianferrarig/frontkit.git ~/.middleman/frontkit```
 
-Initialize middleman on a new or existing folder `$ middleman init path_to_project --template=kick`
+Initialize middleman on a new or existing folder `$ middleman init path_to_project --template=frontkit`
 
 
 For more help follow [Middleman's project template instructions](http://middlemanapp.com/getting-started/welcome/) or feel free to hit me up on [Twitter](http://twitter.com/cristianferrarig).

@@ -49,7 +49,7 @@ activate :livereload
 # as the index of that folder.
 activate :directory_indexes
 
-set :index_file, "components.html"
+# set :index_file, "principal.html"
 
 # Automatically add vendor prefixes to CSS rules in stylesheets.
 activate :autoprefixer
