@@ -29,9 +29,6 @@
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
 
-# Automatically add vendor prefixes to CSS rules in stylesheets.
-activate :autoprefixer
-
 # The extension has 2 optionally configurable fields:
 # https://github.com/ai/autoprefixer#browsers
 # activate :autoprefixer do |config|
@@ -41,12 +38,21 @@ activate :autoprefixer
 
 # Reload the browser automatically whenever files change
 activate :livereload
+# The extension supports a number of options that can be given to the activate statement.
+#activate :livereload do |config|
+#  config.apply_js_live  = false
+#  config.apply_css_live = false
+#end
 
 # Middleman provides the Directory Indexes extension to tell Middleman
 # to create a folder for each .html file and place the built template file
 # as the index of that folder.
 activate :directory_indexes
-# set :index_file, "default.html"
+
+set :index_file, "components.html"
+
+# Automatically add vendor prefixes to CSS rules in stylesheets.
+activate :autoprefixer
 
 
 
@@ -71,6 +77,11 @@ set :css_dir,    'assets/stylesheets'
 set :js_dir,     'assets/javascripts'
 set :images_dir, 'assets/images'
 set :fonts_dir,  'assets/fonts'
+
+# set :helpers_dir,  ''
+# set :layouts_dir,  'layouts'
+# set :partials_dir, ''
+# set :source,       'source'
 
 ready do
   # if you have assets in directories other than your :js_dir or :css_dir,
@@ -98,6 +109,7 @@ configure :build do
 
   # Enable cache buster
   # activate :asset_hash
+  # activate :cache_buster
 
   # Use relative URLs
   # activate :relative_assets
