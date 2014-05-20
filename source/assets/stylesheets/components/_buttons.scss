@@ -22,9 +22,9 @@ $buttons-multiline-padding:         $input-multiline-padding     !default;
 // 1. For input.btn
 // 2. Reset unusual Firefox-on-Android default style;
 //    see https://github.com/necolas/normalize.css/issues/214
-// 3. Prevent gray color from <button> element
+// 3. More consistent. Prevent gray color from <button> element
 
-.button {
+@mixin button {
   display: inline-block;
   zoom: 1;
   text-decoration: none;
@@ -106,6 +106,9 @@ $buttons-multiline-padding:         $input-multiline-padding     !default;
   margin-top: 5px;
 }
 
+.button {
+  @include button;
+}
 // Specificity overrides
 // input[type="submit"],
 // input[type="reset"],
