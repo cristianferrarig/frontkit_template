@@ -198,3 +198,124 @@ $input: (
 @function schema($color:default) {
   @return map-get($schema,$color);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+title: Components
+body_class:
+---
+
+%h1 Buttons
+
+
+%h5 Button tags
+
+%a.button a
+%input.button{type: "button", value: "input"}
+%input.button{type: "submit", value: "submit"}
+%button.button{type: "button"} button
+%div.button div
+%span.button span
+
+%hr
+
+%h5 Static sizes
+
+%a(component class="button xx-small") Button xx-small
+%a(component class="button x-small")  Button x-small
+%a(component class="button small")    Button small
+%a(component class="button medium")   Button medium
+%a(component class="button large")    Button large
+%a(component class="button x-large")  Button x-large
+%a(component class="button xx-large") Button xx-large
+
+%hr
+
+%h5 Relative sizes
+
+.button.smaller(component)  hola
+.button(component)          hola
+.button.larger(component)   hola
+
+%hr
+
+
+
+%h5 Multi line Button
+
+.button Hola
+
+.button.multi-line-button Hola
+
+.button.multi-line-button
+  Download Here
+  %div Version 3.5 12mb
+
+
+.button.multi-line-button
+  Download Here
+  %small Version 3.5 12mb
+
+.button.multi-line-button
+  %h3 Hola asdasd
+  %p= lorem.words 4
+
+
+.button.segmented-button
+  %div Hola
+  %div
+    %i.icon-user
+
+
+.button.segmented-multi-line-button
+  %div Hola asdasd<br/>asdasdas
+  %div
+    %i.icon-user
+
+.button.segmented-multi-line-button
+  %div
+    %h3 Hola asdasd
+    %p= lorem.words 4
+  %div
+    %i.icon-user
+
+
+
+
+%hr
+
+%h5 Colors
+
+.button                  basic
+.button.button-primary   primary
+.button.button-secondary secondary
+.button.button-default   default
+.button.button-info      info
+.button.button-success   success
+.button.button-warning   warning
+.button.button-danger    danger

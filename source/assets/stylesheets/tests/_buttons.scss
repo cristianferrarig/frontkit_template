@@ -1,8 +1,0 @@
-.button {
-  @extend %button;
-  background: blue;
-  color: #FFF;
-  &:hover {
-    background: darken(blue,5%);
-  }
-}

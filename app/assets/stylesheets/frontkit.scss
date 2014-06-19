@@ -2,18 +2,19 @@
 
 @import "normalize-scss";
 
-@import "core/variables";
-@import "core/config";
-@import "core/functions";
-@import "core/scaffold";
-@import "core/icons";
+// @import "core/variables";
+// @import "core/config";
+// @import "core/functions";
+// @import "core/scaffold";
+// @import "core/icons";
+//
+// @import "components/forms";
+// @import "components/buttons";
+//
+// @import "styles/buttons";
 
-@import "components/forms";
-@import "components/buttons";
 
-@import "styles/buttons";
-
-
+/*
 body {
   padding: 30px;
 }
@@ -29,6 +30,7 @@ body {
     margin-top: -15px;
   }
 }
+*/
 
 //.buttons {
 //  @extend %button;

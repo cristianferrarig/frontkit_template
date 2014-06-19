@@ -1,7 +1,7 @@
 {
-  "name": "middleman-boilerplate",
+  "name": "frontkit",
   "version": "1.0.0",
-  "directory": "bower",
+  "directory": "vendor/bower",
   "dependencies": {
     "html5shiv": "~3.7.2",
     "respond": "~1.4.2",
