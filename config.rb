@@ -86,9 +86,9 @@ set :fonts_dir,  'assets/fonts'
 ready do
   # if you have assets in directories other than your :js_dir or :css_dir,
   # you can make them importable by adding them to your Sprockets import path.
-  sprockets.append_path '/vendor'
+  sprockets.append_path '/vendor/assets'
   # Sprockets supports Bower, so you can add your Bower components path directly:
-  sprockets.append_path File.join root, 'bower'
+  sprockets.append_path File.join root, '/vendor/bower'
 end
 
 configure :development do
