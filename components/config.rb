@@ -1,26 +1,24 @@
+page "*", :layout => "layouts/_documentation"
+#set :index_file, "index.html"
 
-activate :directory_indexes
-activate :autoprefixer
-#activate :livereload
+set :source,      'docs'
 
-page "*", :layout => "_layout"
-#set :index_file, "layout.html"
+set :css_dir,     'assets/stylesheets'
+set :js_dir,      'assets/javascripts'
+set :images_dir,  'assets/images'
+set :fonts_dir,   'assets/fonts'
 
-set :source,     '/docs'
-
-set :css_dir,    'assets/stylesheets'
-set :js_dir,     'assets/javascripts'
-set :images_dir, 'assets/images'
-set :fonts_dir,  'assets/fonts'
-
+# set :layouts_dir,  ''
 # set :helpers_dir,  ''
-# set :layouts_dir,  'layouts'
 # set :partials_dir, ''
-# set :source,       'source'
+
+activate :autoprefixer
+activate :livereload
+# activate :directory_indexes
 
 ready do
-  sprockets.append_path '/app/assets'
-  sprockets.append_path '/vendor/assets'
+  sprockets.append_path 'app/assets'
+  sprockets.append_path 'vendor/assets'
   sprockets.append_path File.join root, 'vendor/bower'
 end
 

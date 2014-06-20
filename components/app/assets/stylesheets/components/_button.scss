@@ -1,0 +1,30 @@
+/*doc
+
+---
+title: Buttons
+name: button
+category: Base CSS
+---
+
+## hola
+
+Button styles can be applied to any element. Typically you'll want
+to use either a `<button>` or an `<a>` element:
+
+```haml_example
+%button.btn.btnDefault Click
+%a.btn.btnDefault{href:"trulia.com"} Trulia!
+```
+
+```sass
+small {
+  @include panel(10px);
+  font-size: 85%;
+}
+```
+
+If your button is actually a link to another page, please use the
+`<a>` element, while if your button performs an action, such as
+submitting a form or triggering some javascript event, then use a
+`<button>` element.
+*/
