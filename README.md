@@ -1,7 +1,33 @@
 # Frontkit
-Frontkit is a Middleman 3.x project template with. As with all Middleman templates, using Bundler and Rbenv is recommended.
+
+Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development.
+
 
 ## Quick start
 
-1-
+TBD
 
+## Documentation
+
+TBD
+
+### Running documentation locally
+
+TBD
+
+
+### Build documentation manualy
+
+TBD
+
+
+## Mixer
+
+**Cristian Ferrari**
+
+- <cristianferrarig@gmail.com>
+- <http://github.com/cristianferrarig>
+
+## Copyright and license
+
+???
