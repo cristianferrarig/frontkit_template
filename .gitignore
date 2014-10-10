@@ -17,4 +17,4 @@
 .DS_Store
 
 # Ignore Bower packages
-bower/*
+vendor/bower/*
