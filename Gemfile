@@ -3,7 +3,8 @@
 source "http://rubygems.org"
 
 # gem "middleman-frontkit", "~> 0.0.1"
-gem "middleman-frontkit", "~> 0.0.1", github: "cristianferrarig/middleman-frontkit"
+gem "middleman-frontkit", "~> 0.0.1", path: "../middleman-frontkit"
+# gem "middleman-frontkit", "~> 0.0.1", github: "cristianferrarig/middleman-frontkit"
 
 # gem "middleman-blog",       "~> 3.4.1"
 

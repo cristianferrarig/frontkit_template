@@ -1,6 +1,5 @@
-GIT
-  remote: git://github.com/cristianferrarig/middleman-frontkit.git
-  revision: dea738bed566aa4fa6b307b17108e61477ef16a1
+PATH
+  remote: ../middleman-frontkit
   specs:
     middleman-frontkit (0.0.1)
       coffee-script (~> 2.2)

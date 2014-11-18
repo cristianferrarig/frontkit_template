@@ -5,20 +5,36 @@
 
     -# Always force latest IE rendering engine or request Chrome Frame
     %meta(content="IE=edge,chrome=1" http-equiv="X-UA-Compatible")
+    %meta(content="text/html" http-equiv="content-type" charset="utf-8")
+
+    %meta(name="description" content="")
+    %meta(name="author" content="")
 
     -# Use title if it's in the page YAML frontmatter
     %title= current_page.data.title || "Frontkit"
 
     = stylesheet_link_tag "application"
-    = javascript_include_tag  "application"
 
     /[if lt IE 9]
       -# HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
-      -# WARNING: Respond.js doesn't work if you view the page via file://
-      = javascript_include_tag  "html5shiv"
-      = javascript_include_tag  "respond"
       -# %script{src: "https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"}
+      = javascript_include_tag  "html5shiv"
+
+      -# WARNING: Respond.js doesn't work if you view the page via file://
       -# %script{src: "https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"}
+      = javascript_include_tag  "respond"
 
   %body{ class: "#{page_classes} #{current_page.data.body_class}" }
     = yield
+
+    -# Placed at the end of the document so the pages load faster
+    %script{:src => "https://code.jquery.com/jquery-1.10.2.min.js"}
+    = javascript_include_tag  "application"
+
+    - if build?
+      -# Google Analytics
+      :javascript
+        var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));

@@ -89,7 +89,7 @@ ready do
   # you can make them importable by adding them to your Sprockets import path.
   sprockets.append_path '/vendor/assets'
   # Sprockets supports Bower, so you can add your Bower components path directly:
-  sprockets.append_path File.join root, 'vendor/bower'
+  sprockets.append_path File.join root, '/vendor/bower'
 end
 
 # for physical directories at development mode
@@ -133,7 +133,7 @@ configure :build do
   # ignore 'javascripts/lib/*'
 
   # Optimize images on build
-  activate :imageoptim
+  # activate :imageoptim
 
   # For example, change the Compass output style for deployment
   activate :minify_css
@@ -142,11 +142,11 @@ configure :build do
   activate :minify_javascript
 
   # Minify HTML files
-  activate :minify_html
+  # activate :minify_html
 
   # Enable cache buster
-  activate :asset_hash
-  activate :cache_buster
+  # activate :asset_hash
+  # activate :cache_buster
 
   # Use relative URLs
   # activate :relative_assets
@@ -160,10 +160,10 @@ end
 
 activate :deploy do |deploy|
   deploy.method = :git
+  deploy.build_before = true # default: false
   # Optional Settings
   # deploy.remote   = 'custom-remote' # remote name or git url, default: origin
   # deploy.branch   = 'custom-branch' # default: gh-pages
   # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
   # deploy.commit_message = 'custom-message'      # commit message (can be empty), default: Automated commit at `timestamp` by middleman-deploy `version`
-  # deploy.build_before = true # default: false
 end
